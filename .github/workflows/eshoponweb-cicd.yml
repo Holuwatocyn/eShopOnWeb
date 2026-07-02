@@ -5,12 +5,11 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
+    runs-on: workflow_dispatch
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+       RESOURCE-GROUP: rg-eshoponweb-westeurope
       with:
         dotnet-version: '8.0.x'
         include-prerelease: true
